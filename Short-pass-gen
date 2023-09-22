@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace ConsoleApp1
+{
+class Program
+{
+static void Main(string[] args)
+{
+Console.WriteLine("--Possibly improved C# password generator--");
+Random rnd = new Random();
+char[] charlist = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '=', '+', '{', '}', '[', ']', '|', ';', ':', '<', '>', '/', '?'};
+Console.WriteLine("Enter password length:");
+int num = Convert.ToInt32(Console.ReadLine());
+
+
+while(num > 0)
+{
+num = num - 1;
+int charlistindex = rnd.Next(charlist.Length);
+Console.Write(charlist[charlistindex]);
+}
+
+
+}
+}
+}
